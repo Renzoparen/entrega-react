@@ -1,0 +1,27 @@
+.nav{
+    background-color: cadetblue;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    img{
+        width: 80%;
+    }
+
+    a {
+        width: 10%;
+        display: flex;
+        justify-content: space-around;
+      }
+      li {
+        list-style: none;
+      }
+      
+      .categorias {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 20px;
+
+      }
+}
