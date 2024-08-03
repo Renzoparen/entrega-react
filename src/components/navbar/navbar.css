@@ -9,9 +9,12 @@
     }
 
     a {
-        width: 10%;
+        width: 7%;
         display: flex;
         justify-content: space-around;
+        text-decoration: none;
+        color: white;
+        font-weight: bold;
       }
       li {
         list-style: none;
@@ -22,6 +25,10 @@
         justify-content: space-between;
         align-items: center;
         gap: 20px;
+        
 
       }
+      
+
+
 }

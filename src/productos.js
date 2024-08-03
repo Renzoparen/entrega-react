@@ -1,6 +1,5 @@
 export let productos = [
     {
-        id: 1,
         title: "Remera oversize negra",
         price: 1290,
         description: "Remera OVERSIZE de algodon",
@@ -9,7 +8,6 @@ export let productos = [
         category: "stock",
     },
     {
-        id: 2,
         title: "Remera oversize blanca",
         price: 1290,
         description: "Remera OVERSIZE de algodon",
@@ -18,7 +16,6 @@ export let productos = [
         category: "stock",
     },
     {
-        id: 3,
         title: "Remera oversize estampado",
         price: 1500,
         description: "Su diseño único y su estilo moderno te destacarán entre los demás.",
@@ -27,7 +24,6 @@ export let productos = [
         category: "novedades",
     },
     {
-        id: 4,
         title: "Remera oversize estampado PARIS",
         price: 1300,
         description: "El oversize es perfecto para sentirte cómodo y lucir siempre a la moda.",
@@ -36,7 +32,6 @@ export let productos = [
         category: "liquidacion"
     },
     {
-        id: 5,
         title: "Remera oversize frente estampado",
         price: 1500,
         description: "Remera de jersey algodón Premium, oversize con estampa grande al frente.",
@@ -45,11 +40,10 @@ export let productos = [
         category: "novedades"
     },
     {
-        id: 6,
         title: "Remera oversize SMILE negra",
         price: 1500,
         description: "Remera 100% algodón, modelo oversize, suelta, con cuello al corte",
-        img: "https://res.cloudinary.com/dugh35cnu/image/upload/v1720116929/whatsapp-image-2023-08-02-at-18-05-2611-aef6f6aa2097dbbe4e16910240649855-240-0_ydxvqi.jpg",
+        img: "https://res.cloudinary.com/dugh35cnu/image/upload/v1720924462/a-a-remeras-negra-oversize-smile-hombre-41-e605e212d47b12b50316905833021687-1024-1024_nygpxp.jpg",
         stock: 8,
         category: "liquidacion",
     } 
