@@ -36,7 +36,7 @@ export let productos = [
         price: 1500,
         description: "Remera de jersey algodón Premium, oversize con estampa grande al frente.",
         img: "https://res.cloudinary.com/dugh35cnu/image/upload/v1720116929/whatsapp-image-2023-08-02-at-18-05-2611-aef6f6aa2097dbbe4e16910240649855-240-0_ydxvqi.jpg",
-        stock: 0,
+        stock: 1,
         category: "novedades"
     },
     {

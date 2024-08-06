@@ -1,14 +1,17 @@
 import { useContext, useState } from "react";
 import { CartContext } from "../../context/CartContext";
-import { addDoc, collection, doc, updateDoc  } from "firebase/firestore";
+import { addDoc, collection, doc, updateDoc } from "firebase/firestore";
 import { db } from "../../firebaseConfig";
 import { useNavigate } from "react-router-dom";
+import { toast } from "sonner";
+
 
 const Checkout = () => {
-  const navigate = useNavigate(); // ---> es una funcion
+  const navigate = useNavigate();
 
   const [user, setUser] = useState({ nombre: "", email: "", telefono: "" });
   const { cart, getTotalPrice, clearCart } = useContext(CartContext);
+  const [orderId, setOrderId] = useState("");
 
   let total = getTotalPrice();
 
@@ -21,7 +24,23 @@ const Checkout = () => {
     };
 
     let ordersCollection = collection(db, "orders");
+    let productosCollection = collection(db, "productos");
+    cart.forEach((elemento) => {
+      let refDoc = doc(productosCollection, elemento.id);
+      updateDoc(refDoc, { stock: elemento.stock - elemento.cantidad });
+    });
+
     addDoc(ordersCollection, order)
+      .then((res) => {
+        setOrderId(res.id);
+        toast.success(`Gracias por tu compra , tu ticket es ${res.id} `);
+      })
+      .catch()
+      .finally(() => {
+        clearCart();
+        navigate("/");
+      });
+  };
 
   const capturarData = (event) => {
     setUser({ ...user, [event.target.name]: event.target.value });
@@ -58,6 +77,6 @@ const Checkout = () => {
       )}
     </div>
   );
-}; }
+};
 
 export default Checkout;

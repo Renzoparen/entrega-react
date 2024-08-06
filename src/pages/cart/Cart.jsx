@@ -60,7 +60,7 @@ const Cart = () => {
 
       {cart.length > 0 && <Button variant="contained" onClick={clearCart}> Limpiar carrito </Button>}
 
-      <Link to="/checkout" >
+      <Link to="/Checkout" >
       
         {cart.length > 0 && <Button variant="contained">Finalizar compra</Button>}
       
